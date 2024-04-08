@@ -20,6 +20,7 @@ namespace lab3ModeladoDatos
         {
             InitializeComponent();
             _connection = connection;
+            _tableName = tableName;
         }
 
         private void Form2_Load(object sender, EventArgs e)
@@ -31,7 +32,8 @@ namespace lab3ModeladoDatos
         {
             try
             {
-                string query = $"SELECT * FROM {_tableName}";
+                //string query = $"SELECT * FROM {_tableName}";
+                string query = $"select * from {_tableName}";
                 using (SqlCommand command = new SqlCommand(query, _connection))
                 {
                     SqlDataAdapter da = new SqlDataAdapter(command);

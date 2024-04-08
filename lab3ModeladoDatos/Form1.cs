@@ -35,7 +35,7 @@ namespace lab3ModeladoDatos
             try
             {
                 cnx.Open();
-                Form2 fr2 = new Form2(cnx, "producto");
+                Form2 fr2 = new Form2(cnx, "PRODUCTO");
                 fr2.Show();
                 Hide();
             }
@@ -60,14 +60,14 @@ namespace lab3ModeladoDatos
                 return;
             }
 
-            string cadenaConexion = $"Data Source =.; Initial Catalog = tempdb; User ID = {user}; Password = {dbPass}; Encrypt = False";
+            string cadenaConexion = $"Data Source =.; Initial Catalog = Negocios; User ID = {user}; Password = {dbPass}; Encrypt = False";
 
             SqlConnection cnx = new SqlConnection(cadenaConexion);
 
             try
             {
                 cnx.Open();
-                Form2 fr2 = new Form2(cnx, "producto");
+                Form2 fr2 = new Form2(cnx, "PRODUCTO");
                 fr2.Show();
                 Hide();
             }
